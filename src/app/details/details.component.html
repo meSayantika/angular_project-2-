@@ -1,0 +1,32 @@
+
+<div *ngIf="item?.id">
+    <label class="fw-bold text-uppercase" for="">Id: </label> {{ item?.id
+    }}<br />
+    <label class="fw-bold text-uppercase" for="">Name: </label> {{ item?.name
+    }}<br />
+    <label class="fw-bold text-uppercase" for="">Email: </label> {{ item?.email
+    }}<br />
+    <label class="fw-bold text-uppercase" for="">Age: </label> {{ item?.age
+    }}<br />
+  </div>
+<div><a
+class="button"
+button
+type="button"
+class="btn btn-primary"
+routerLink="/login"
+routerLinkActive="activebutton"
+>Back to Login page</a
+>
+</div><br>
+<div>
+<a
+class="button"
+button
+type="button"
+class="btn btn-info"
+routerLink="/dashboard"
+routerLinkActive="activebutton"
+>Back to Dashboard</a
+>
+</div>

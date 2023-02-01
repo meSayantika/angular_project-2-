@@ -1,0 +1,62 @@
+<div class="container">
+    <table  class="table">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Username</th>
+          <th scope="col">Email</th>
+          <th scope="col">Address</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Website</th>
+          <th scope="col">Company</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let dt of dataFromServer">
+          <td>
+            <h5>{{ dt.id }}</h5>
+          </td>
+          <td>
+            <h5>{{ dt.name }}</h5>
+          </td>
+          <td>
+            <h5>{{ dt.username }}</h5>
+          </td>
+          <td>
+            <h5>{{ dt.email }}</h5>
+          </td>
+          <td>
+            <h5>{{ dt.address.city }}
+            {{ dt.address.street }}</h5>
+          </td>
+          <td>
+            <h5>{{ dt.phone }}</h5>
+          </td>
+          <td>
+            <h5>{{ dt.website }}</h5>
+          </td>
+          <td>
+            <h5>{{ dt.company.name}}</h5>
+          </td>
+          <td>
+            <a
+  class="button">
+  <button type="button" class="btn btn-success" (click)="edit(dt.id)">
+              Edit
+            </button>
+        </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+<a
+class="button"
+button
+type="button"
+class="btn btn-primary"
+routerLink="/login"
+routerLinkActive="activebutton"
+>Back</a
+>
